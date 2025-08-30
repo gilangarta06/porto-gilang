@@ -113,18 +113,17 @@
   <!-- kontak --> 
   <section class="contact" id="contact">
     <div class="container">
-      <h2 class="section-title">Hubungi Saya</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Nama Anda" required />
-        <input type="email" placeholder="Email Anda" required />
-        <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+     <h2 class="section-title">Hubungi Saya</h2>
+      <form class="contact-form" onsubmit="sendToWhatsApp(event)">
+        <input type="text" id="name" placeholder="Nama Anda" required />
+        <input type="email" id="email" placeholder="Email Anda" required />
+        <textarea id="message" placeholder="Pesan Anda" rows="5" required></textarea>
         <button type="submit" class="btn-primary">Kirim Pesan</button>
       </form>
 
       <div class="social-links">
         <a href="https://instagram.com/gilangarta26" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://www.linkedin.com/in/gilang-arta-344a66241/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <!-- <a href="https://behance.net/andi_saya" target="_blank"><i class="fab fa-behance"></i></a> -->
         <a href="https://github.com/gilangarta06" target="_blank"><i class="fab fa-github"></i></a>
       </div>
     </div>
@@ -133,7 +132,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 <span class="highlight">[Nama Anda]</span>. <strong>Semua Hak Dilindungi.</strong></p>
+      <p>&copy; 2025 <span class="highlight">Gilang Arta</span>.></p>
     </div>
   </footer>
 

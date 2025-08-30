@@ -24,8 +24,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Form submission handling
-document.querySelector('.contact-form')?.addEventListener('submit', (e) => {
-  e.preventDefault();
-  alert('Pesan Anda telah terkirim! Terima kasih. 🚀');
-  e.target.reset();
-});
+  function sendToWhatsApp(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+    const phoneNumber = "6282239340237";
+    const text = `Halo, saya ${name} ${email}.\n${message}`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank");
+  }
